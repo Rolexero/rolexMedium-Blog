@@ -12,7 +12,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         return (
           <HeaderContainer>
             <LogoSection>
-              <Link href="/">Rolex Medium</Link>
+              <Link href="/">Rolex Medium Blog</Link>
             </LogoSection>
           </HeaderContainer>
         );
