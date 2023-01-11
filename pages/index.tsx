@@ -5,17 +5,19 @@ import styles from '../styles/Home.module.css'
 import { NextPage } from 'next'
 import tw, { styled } from 'twin.macro'
 import { Header } from '../app/Components/Header'
+import { Banner } from '../app/Components/Banner'
  
 const Home: NextPage = ()=>{
   return (
     <Container>
       <Header />
+      <Banner />
     </Container>
   )
 }
 
 const Container = styled.div`
-  ${tw`p-4 `}
+  ${tw`p-0 `}
 `;
 
 export default Home
