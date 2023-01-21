@@ -4,9 +4,9 @@ import tw, { styled } from "twin.macro";
 import media from "../../styles/media";
 import { BANNER_HEIGHT } from "../constants/variables";
 import { ButtonWrapper } from "./Header";
+import BannerImg from "../assets/banner.png";
 
 interface BannerProps {}
-import BannerImg from "../assets/banner.png";
 
 export const Banner: React.FC<BannerProps> = ({}) => {
   return (
@@ -29,8 +29,7 @@ const BannerContainer = styled.div`
   ${tw`flex px-[50px] bg-[#FCC017] items-center border-y-[1px] border-[#000]`}
 
   .headingTag {
-    ${tw`max-w-xl text-[6rem]`}
-    font-family: 'Crimson Text', serif;
+    ${tw`max-w-xl text-[5rem]`}
 
     ${media.smallDesktop} {
       ${tw`max-w-xl text-[3rem]`}
