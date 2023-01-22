@@ -67,7 +67,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
   );
 };
 
-const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
   ${tw`flex py-0 px-[50px]  justify-between items-center bg-[#FCC017]`}
 
   height: ${NAVBAR_HEIGHT}px;
@@ -112,6 +112,6 @@ export const ButtonWrapper = styled.button`
   ${tw`bg-[#000000] text-white p-2 px-4 w-[140px] text-center  rounded-full cursor-pointer`}
 `;
 
-const LogoSection = styled.div`
+export const LogoSection = styled.div`
   ${tw`cursor-pointer object-contain`}
 `;
