@@ -11,12 +11,17 @@ import { Bodycomponent } from "../app/Components/Body";
 
 const Home: NextPage = () => {
   return (
-    <Container>
-      <Header />
-      <Banner />
-      <Trending />
-      <Bodycomponent />
-    </Container>
+    <>
+      <Head>
+        <title>RolexMedium - Where good ideas find you</title>
+      </Head>
+      <Container>
+        <Header />
+        <Banner />
+        <Trending />
+        <Bodycomponent />
+      </Container>
+    </>
   );
 };
 
