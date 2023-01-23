@@ -30,7 +30,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
   const [open, setIsOpen] = useState(false);
 
   return (
-    <HeaderContainer>
+    <HeaderContainer className="bg-[#FCC017]">
       <LogoSection>
         <Image src={Logo} alt="medium logo" height={40} width={200} />
       </LogoSection>
@@ -68,7 +68,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
 };
 
 export const HeaderContainer = styled.div`
-  ${tw`flex py-0 px-[50px]  justify-between items-center bg-[#FCC017]`}
+  ${tw`flex py-0 px-[50px]  justify-between items-center `}
 
   height: ${NAVBAR_HEIGHT}px;
   font-family: "Crimson Text", serif;
