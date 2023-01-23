@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import { PageLayout } from "../../app/Components/PageLayout";
+import { PageLayout } from "../../app/Components/Page/PageLayout";
 
 interface Props {}
 
