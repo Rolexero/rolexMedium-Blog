@@ -5,7 +5,7 @@ import Image from "next/image";
 import Logo from "../../assets/mediumlogo.png";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import { Menu } from "./Menu";
+import { MenuItems } from "./Menu";
 
 interface PageNavProps {}
 
@@ -51,7 +51,7 @@ export const PageNav: React.FC<PageNavProps> = ({}) => {
               icon="carbon:user-avatar-filled"
               className="text-[40px] text-[#979696]"
             />
-            <Menu />
+            <MenuItems />
           </button>
         </div>
       </div>
