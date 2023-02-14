@@ -2,12 +2,11 @@ import { Menu } from "@headlessui/react";
 import { Icon } from "@iconify/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import tw, { styled } from "twin.macro";
 
 const links = [
-  { href: "/signup", label: "Sign up" },
-  { href: "/signin", label: "Sign in " },
   { href: "/plans", label: "Become a Member" },
   { href: "/partner-program", label: "Apply to the Partner Program" },
   { href: "/membership", label: "Gift a membership" },
@@ -18,15 +17,22 @@ interface MenuProps {}
 export const MenuItems: React.FC<MenuProps> = ({}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const router = useRouter();
+
+  const handleLinkClickHandler = () => {
+    router.push("/");
+  };
 
   return (
     <Menu>
-      <motion.button
-        animate={{ rotate: isMenuOpen ? 180 : 0 }}
-        onClick={toggleMenu}
-        className="p-2"
-      >
-        <Icon icon={"akar-icons:chevron-down"} />
+      <motion.button onClick={toggleMenu} className="p-2 flex items-center">
+        <Icon
+          icon="carbon:user-avatar-filled"
+          className="text-[40px] text-[#979696]"
+        />
+        <motion.button animate={{ rotate: isMenuOpen ? 180 : 0 }}>
+          <Icon icon={"akar-icons:chevron-down"} />
+        </motion.button>
       </motion.button>
       <AnimatePresence>
         {isMenuOpen && (
@@ -35,18 +41,28 @@ export const MenuItems: React.FC<MenuProps> = ({}) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0.1, y: 0 }}
             layoutId="menu"
-            className="text-left absolute right-0 bg-white rounded-md w-[230px] mr-4 drop-shadow-md top-8 z-50"
+            className="text-left absolute right-0 bg-white rounded-md w-[230px] mr-10 drop-shadow-md top-8 z-50 mt-4 "
             onClick={toggleMenu}
           >
-            <p className="text-center font-bold text-[18px] p-4 py-4">
+            <p className="text-center font-bold text-[18px] py-4 px-5">
               Get started on Medium
             </p>
+            <div className="border-b-[1px] px-5">
+              <button className=" p-1 bg-nativeGreen w-full rounded-full text-white">
+                Sign up
+              </button>
+              <button className=" p-1 border-[1px] border-gray-400  my-4 w-full rounded-full text-black">
+                Sign in
+              </button>
+            </div>
             {links.map((link, id) => (
-              <li key={id}>
-                <Link href={link.href}>
-                  <MenuLink>{link.label}</MenuLink>
-                </Link>
-              </li>
+              <button
+                key={id}
+                onClick={handleLinkClickHandler}
+                className="w-full text-left px-5"
+              >
+                <MenuLink>{link.label}</MenuLink>
+              </button>
             ))}
           </motion.ul>
         )}
@@ -56,5 +72,5 @@ export const MenuItems: React.FC<MenuProps> = ({}) => {
 };
 
 const MenuLink = styled.div`
-  ${tw`px-5 py-2 hover:bg-gray-200 block cursor-default`}
+  ${tw` py-2 hover:text-gray-800 block text-gray-500 cursor-pointer`}
 `;

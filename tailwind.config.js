@@ -1,7 +1,7 @@
 module.exports = {
     content: [
         "./pages/**/*.{js,ts,jsx,tsx}",
-        "./app/Components/**/*.{js,ts,jsx,tsx}"
+        "./app/Components/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
         extend: {
@@ -14,6 +14,9 @@ module.exports = {
             fontFamily: {
                 poppins: ["gt-super", "sans-serif"],
                 inter: ["Inter", "sans-serif"],
+            },
+            colors: {
+                nativeGreen: "#0F730C",
             },
         },
     },

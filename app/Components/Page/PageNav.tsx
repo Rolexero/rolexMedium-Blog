@@ -33,7 +33,7 @@ export const PageNav: React.FC<PageNavProps> = ({}) => {
       <div className="secondDiv">
         <Link
           href="new-story"
-          className="hidden md:flex  items-center justify-center font-normal text-[#5e5d5d] gap-2 hover:text-black"
+          className="hidden md:flex  items-center justify-center font-normal text-[#5e5d5d] gap-2 hover:text-black mx-6"
         >
           <Icon
             icon={"jam:write-f"}
@@ -41,16 +41,12 @@ export const PageNav: React.FC<PageNavProps> = ({}) => {
           />
           Write
         </Link>
-        <button className="rounded-full bg-[#0F730C] text-white px-4">
+        <button className="rounded-full bg-nativeGreen text-white px-4 py-1">
           Sign up
         </button>
         <button className="rounded-full text-black px-4">Sign in</button>
         <div>
           <button className="flex items-center">
-            <Icon
-              icon="carbon:user-avatar-filled"
-              className="text-[40px] text-[#979696]"
-            />
             <MenuItems />
           </button>
         </div>
@@ -62,13 +58,13 @@ export const PageNav: React.FC<PageNavProps> = ({}) => {
 const Wrapper = styled.div`
   ${tw`flex flex-col gap-4 md:gap-0 md:flex-row justify-between w-full`}
   .firstDiv {
-    ${tw`flex gap-2 justify-between mt-8 md:mt-0`}
+    ${tw`flex gap-1 justify-between mt-8 md:mt-0`}
     .inputWrapper {
       ${tw`flex items-center gap-2 align-middle outline-none bg-[#FAFAFA] rounded-full h-10 p-[1px] px-2 w-[200px]`}
     }
   }
   .secondDiv {
-    ${tw`flex justify-between gap-2`}
+    ${tw`flex justify-between gap-2 items-center`}
   }
 `;
 
