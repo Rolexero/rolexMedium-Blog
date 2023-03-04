@@ -68,7 +68,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
 };
 
 export const HeaderContainer = styled.div`
-  ${tw`flex py-0 px-[50px]  justify-between items-center `}
+  ${tw`flex py-0  justify-between items-center md:px-[50px]`}
 
   height: ${NAVBAR_HEIGHT}px;
   font-family: "Crimson Text", serif;

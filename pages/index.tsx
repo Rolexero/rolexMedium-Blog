@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   );
 };
 
-const Container = styled.div`
+export const Container = styled.div`
   ${tw`p-0 `}
 `;
 
